@@ -20,11 +20,13 @@
 .moneyList{
     list-style: none;
     width: 80%;
+    height: 80%;
     padding: 20px;
     text-align: center;
     display:flex;
     flex-direction: column;
-    row-gap: 1rem;
+    row-gap: .4rem;
+
 }
 
 .moneyListItem{

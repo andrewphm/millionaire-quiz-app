@@ -1,6 +1,10 @@
+
+import { useState } from "react"
 import "./app.css"
 
 function App() {
+  const [questionNumber, setQuestionNumber] = useState(1)
+
   const moneyPyramid = [
     { id: 1, amount: "$ 100" },
     { id: 2, amount: "$ 200" },
@@ -18,6 +22,16 @@ function App() {
     { id: 14, amount: "$ 500,000" },
     { id: 15, amount: "$ 1,000,000" },
   ]
+  const moneyList = moneyPyramid.map(obj => {
+    return (
+      <li className={questionNumber === obj.id ? "moneyListItem active" : "moneyListItem"}>
+      <span className="moneyListItemNumber">{obj.id}</span>
+      <span className="moneyListItemAmount">{obj.amount}</span>
+    </li>
+    )
+  })
+
+  console.log(moneyList)
 
   return (
     <div className="app">
@@ -25,12 +39,7 @@ function App() {
 
       <div className="pyramid">
         <ul className="moneyList">
-          <li className="moneyListItem active">
-            <span className="moneyListItemNumber">4</span>
-            <span className="moneyListItemAmount">$ 400</span>
-          </li>
-
-
+          {moneyList.reverse()}
         </ul>
       </div>
 

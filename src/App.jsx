@@ -1,4 +1,4 @@
-
+import Trivia from './components/Trivia'
 import { useState } from "react"
 import "./app.css"
 
@@ -42,7 +42,7 @@ function App() {
         </div>
 
         <div className="main__bottom">
-          Question and answers
+          <Trivia/>
         </div>
       </div>
 

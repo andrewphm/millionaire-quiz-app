@@ -3,7 +3,55 @@ import { useState } from "react"
 import "./app.css"
 
 function App() {
-  const [questionNumber, setQuestionNumber] = useState(1)
+  const [questionNumber, setQuestionNumber] = useState(1);
+  const [timeOut, setTimeOut] = useState(false);
+
+  const data = [
+    {
+      id: 1,
+      question: 'Rolex is a compnay that specializes in what type of products?',
+      answers: [
+        {
+          text: "Phones",
+          correct: false,
+        },
+        {
+          text: 'Watches',
+          correct: true,
+        },
+        {
+          text: "Clothing",
+          correct: false,
+        },
+        {
+          text: "Cars",
+          correct: false,
+        }
+      ]
+    },
+    {
+      id: 1,
+      question: 'In what country is the famous car brand Honda from?',
+      answers: [
+        {
+          text: "Japan",
+          correct: true,
+        },
+        {
+          text: 'Korea',
+          correct: false,
+        },
+        {
+          text: "Germany",
+          correct: false,
+        },
+        {
+          text: "China",
+          correct: false,
+        }
+      ]
+    }
+  ]
 
   const moneyPyramid = [
     { id: 1, amount: "$ 100" },
@@ -42,7 +90,12 @@ function App() {
         </div>
 
         <div className="main__bottom">
-          <Trivia/>
+          <Trivia 
+          data={data} 
+          setTimeOut={timeOut}
+          questionNumber={questionNumber} 
+          setQuestionNumber={setQuestionNumber}
+          />
         </div>
       </div>
 

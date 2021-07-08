@@ -76,6 +76,47 @@
     background: #3c0e87;
 }
 
+.answer.correct{
+    animation: correct 3s ease forwards;
+}
+
+@keyframes correct{
+    0%, 
+    22%,
+    42% {
+        background: #3c0e87;
+    }
+    20%,
+    40%,
+    60%{
+        background: linear-gradient(#0e0124, #22074d);
+    }
+    62%,
+    100%{
+        background: green;
+    }
+}
+
+.answer.incorrect{
+    animation: incorrect 3s ease forwards;
+}
+
+@keyframes incorrect{
+    0%, 
+    22%,
+    42% {
+        background: #3c0e87;
+    }
+    20%,
+    40%,
+    60%{
+        background: linear-gradient(#0e0124, #22074d);
+    }
+    62%,
+    100%{
+        background: red;
+    }
+}
 
 .pyramid{
     width: 25%;

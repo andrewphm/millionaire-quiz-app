@@ -7,6 +7,10 @@ A simple trivia web app. You have 45 seconds to answer the question, get them al
 - CSS(grid/flex)
 - Functional components
 
+Click [here](http://andrewpham.ca/millionaire-quiz-app/) to play.
+
+<img src="/preview.png" alt="preview"/>
+
 <details>
     <summary>Deploying to GH pages</summary>
     Steps:

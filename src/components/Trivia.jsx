@@ -12,12 +12,14 @@ const Trivia = ({
     questionNumber, 
     setQuestionNumber,
 }) => {
+
+    // useStates for setting the questions, the answer selected, and setting the classNames
     const [question, setQuestion] = useState(null);
     const [selectedAnswer, setSelectedAnswer] = useState(null);
     const [className, setClassName] = useState('answer');
 
+    // Change question 
     useEffect(() => {
-        console.log('useEffect on mount')
         setQuestion(data[questionNumber - 1])
     },[data, questionNumber])
 
@@ -27,6 +29,8 @@ const Trivia = ({
         }, duration)
     }
 
+    // event handler for when answer is chosen. Validates the answer and assigns the corresponding classname.
+    // If correct set the next question number and reset selected answer. 
     const handleClick = (arr) => {
         setSelectedAnswer(arr);
         setClassName('answer active')

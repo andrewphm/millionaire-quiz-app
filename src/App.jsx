@@ -4,11 +4,13 @@ import "./app.css"
 import Timer from './components/Timer';
 
 function App() {
-  const [username, setUserName] = useState(null);
+
+  // Use states for question, current prize amount, and if game is over.
   const [questionNumber, setQuestionNumber] = useState(1);
   const [stop, setStop] = useState(false);
   const [earned, setEarned] = useState('$ 0');
 
+  // Array of questions/answers
   const data = [
     {
       id: 1,
@@ -346,6 +348,7 @@ function App() {
     }
   ]
 
+  // Array for prize amounts
   const moneyPyramid = useMemo(() => 
     [
       { id: 1, amount: "$ 100" },
@@ -366,6 +369,7 @@ function App() {
     ].reverse(),
   [])
 
+  // Render prize amounts. Using CSS to highlight the current amount based on the questionNumber
   const moneyList = moneyPyramid.map(obj => {
     return (
       <li className={questionNumber === obj.id ? "moneyListItem active" : "moneyListItem"}>
@@ -375,7 +379,7 @@ function App() {
     )
   })
 
-  //Hook to change the amount earned
+  // Hook to change the amount earned 
   useEffect(()=> {
     if(questionNumber > 1) {
       setEarned(moneyPyramid.find((element) => element.id === questionNumber - 1).amount);
@@ -385,6 +389,8 @@ function App() {
 
   return (
     <div className="app">
+
+        {/* Main div holding the timer and question/answers section */}
         <div className="main">
           {stop ? (
              <h1 className="endText">Total Prize Money: {earned}</h1>
@@ -408,6 +414,7 @@ function App() {
         )}
         </div>
 
+        {/* Side div holding the money pyramid*/}
         <div className="pyramid">
           <ul className="moneyList">
             {moneyList}

@@ -4,6 +4,7 @@ import "./app.css"
 import Timer from './components/Timer';
 
 function App() {
+  const [username, setUserName] = useState(null);
   const [questionNumber, setQuestionNumber] = useState(1);
   const [stop, setStop] = useState(false);
   const [earned, setEarned] = useState('$ 0');
@@ -56,6 +57,292 @@ function App() {
           correct: false,
         }
       ]
+    },
+    {
+      id: 3,
+      question: 'What is the capital city of Spain?',
+      answers: [
+        {
+          text: "Madrid",
+          correct: true,
+        },
+        {
+          text: 'Barcelona',
+          correct: false,
+        },
+        {
+          text: "Seville",
+          correct: false,
+        },
+        {
+          text: "Palma",
+          correct: false,
+        }
+      ]
+    },
+    {
+      id: 4,
+      question: 'Which Sesame Street character is also known as The Grouch',
+      answers: [
+        {
+          text: "Elmo",
+          correct: false,
+        },
+        {
+          text: 'Big Bird',
+          correct: false,
+        },
+        {
+          text: "Oscar",
+          correct: true,
+        },
+        {
+          text: "Ernie",
+          correct: false,
+        }
+      ]
+    },
+    {
+      id: 5,
+      question: 'What is cancer?',
+      answers: [
+        {
+          text: "Disease of the brain",
+          correct: false,
+        },
+        {
+          text: 'Disease of the cells',
+          correct: true,
+        },
+        {
+          text: "Disease of the heart",
+          correct: false,
+        },
+        {
+          text: "Disease of the lungs",
+          correct: false,
+        }
+      ]
+    },
+    {
+      id: 6,
+      question: 'How many provinces are there in Canada?',
+      answers: [
+        {
+          text: "10",
+          correct: true,
+        },
+        {
+          text: '9',
+          correct: false,
+        },
+        {
+          text: "13",
+          correct: false,
+        },
+        {
+          text: "12",
+          correct: false,
+        }
+      ]
+    },
+    {
+      id: 7,
+      question: 'Who was the first Prime Minister of Canada?',
+      answers: [
+        {
+          text: "Alexander Mackenzie",
+          correct: false,
+        },
+        {
+          text: 'John Abbott',
+          correct: false,
+        },
+        {
+          text: "Sir John A. Macdonald",
+          correct: true,
+        },
+        {
+          text: "Wilfrid Laurier",
+          correct: false,
+        }
+      ]
+    },
+    {
+      id: 8,
+      question: 'Which was the last province to join Canada?',
+      answers: [
+        {
+          text: "Newfoundland",
+          correct: true,
+        },
+        {
+          text: 'Quebec',
+          correct: false,
+        },
+        {
+          text: "PEI",
+          correct: false,
+        },
+        {
+          text: "British Columbia",
+          correct: false,
+        }
+      ]
+    },
+    {
+      id: 9,
+      question: 'In the "Road Runner and Coyote" cartoons, what famous sound does the Road Runner make?',
+      answers: [
+        {
+          text: "Ping! Ping!",
+          correct: false,
+        },
+        {
+          text: 'Beep! Beep!',
+          correct: true,
+        },
+        {
+          text: "Aooga! Aooga!",
+          correct: false,
+        },
+        {
+          text: "Vroom! Vroom!",
+          correct: false,
+        }
+      ]
+    },
+    {
+      id: 10,
+      question: 'Which zodiac sign is NOT represented by a horned animal?',
+      answers: [
+        {
+          text: "Aries",
+          correct: false,
+        },
+        {
+          text: 'Taurus',
+          correct: false,
+        },
+        {
+          text: "Capricorn",
+          correct: false,
+        },
+        {
+          text: "Virgo",
+          correct: true,
+        }
+      ]
+    },
+    {
+      id: 11,
+      question: 'Complete the title of this James Bond film, "The Man With The..."?',
+      answers: [
+        {
+          text: "Golden Eye",
+          correct: false,
+        },
+        {
+          text: 'Golden Dog',
+          correct: false,
+        },
+        {
+          text: "Golden Gun",
+          correct: true,
+        },
+        {
+          text: "Golden Arrow",
+          correct: false,
+        }
+      ]
+    },
+    {
+      id: 12,
+      question: 'Ballet originated in which country?',
+      answers: [
+        {
+          text: "Italy",
+          correct: true,
+        },
+        {
+          text: 'Brazil',
+          correct: false,
+        },
+        {
+          text: "Russia",
+          correct: false,
+        },
+        {
+          text: "America",
+          correct: false,
+        }
+      ]
+    },
+    {
+      id: 13,
+      question: 'Which country hosted the 1992 Summer Olympics?',
+      answers: [
+        {
+          text: "Spain",
+          correct: true,
+        },
+        {
+          text: 'New Zealand',
+          correct: false,
+        },
+        {
+          text: "Iceland",
+          correct: false,
+        },
+        {
+          text: "England",
+          correct: false,
+        }
+      ]
+    },
+    {
+      id: 14,
+      question: 'Which company was founded first?',
+      answers: [
+        {
+          text: "eBay",
+          correct: false,
+        },
+        {
+          text: 'Johnson & Johnson',
+          correct: true,
+        },
+        {
+          text: "Versace",
+          correct: false,
+        },
+        {
+          text: "Starbucks",
+          correct: false,
+        }
+      ]
+    },
+    {
+      id: 15,
+      question: 'Which scientific unit is named after an Italian nobleman?',
+      answers: [
+        {
+          text: "Newton",
+          correct: false,
+        },
+        {
+          text: 'Decibel',
+          correct: false,
+        },
+        {
+          text: "Tesla",
+          correct: false,
+        },
+        {
+          text: "Volt",
+          correct: true,
+        }
+      ]
     }
   ]
 
@@ -98,10 +385,10 @@ function App() {
 
   return (
     <div className="app">
-      <div className="main">
-        {stop ? (
-          <h1 className="endText">You earned: {earned}</h1>
-        ) : (
+        <div className="main">
+          {stop ? (
+             <h1 className="endText">Total Prize Money: {earned}</h1>
+          ) : (
          <> 
           <div className="main__top">
             <div className="timer">
@@ -119,14 +406,13 @@ function App() {
           </div>
          </> 
         )}
-      </div>
+        </div>
 
-      <div className="pyramid">
-        <ul className="moneyList">
-          {moneyList}
-        </ul>
-      </div>
-
+        <div className="pyramid">
+          <ul className="moneyList">
+            {moneyList}
+          </ul>
+         </div>
     </div>
   );
 }

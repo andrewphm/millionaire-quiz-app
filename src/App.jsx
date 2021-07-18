@@ -242,7 +242,7 @@ function App() {
       answers: [
         {
           text: "Golden Eye",
-          correct: false,
+          correct: true,
         },
         {
           text: 'Golden Dog',
@@ -250,7 +250,7 @@ function App() {
         },
         {
           text: "Golden Gun",
-          correct: true,
+          correct: false,
         },
         {
           text: "Golden Arrow",

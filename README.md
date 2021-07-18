@@ -16,7 +16,7 @@ Click [here](http://andrewpham.ca/millionaire-quiz-app/) to play.
     Steps:
     <ul>
         <li>(Inside your project folder) npm install gh-pages --save-dev</li>
-        <li>(Add to your package.json) "homepage": "http://andrwphm.github.io/name-of-porject"</li>
+        <li>(Add to your package.json) "homepage": "http://andrwphm.github.io/name-of-project"</li>
         <li>(Add scripts) "predeploy": "npm run build"</li>
         <li>(Add scripts) "deploy": "gh-pages -d build"</li>
         <li>(Run) npm run deploy</li>
